@@ -14,6 +14,7 @@ export default async function PagesProduct({ params }) {
   return (
     <div>
       <Example
+        key={id}
         productName={data.title}
         image={data.image}
         star={data.rating.rate}

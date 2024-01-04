@@ -30,7 +30,7 @@ export default async function PagesProduct({ params }) {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <CardProduct
-                key={index}
+                key={products.title}
                 img={products.image}
                 price={products.price}
                 productName={products.title}
