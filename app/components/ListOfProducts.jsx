@@ -1,14 +1,8 @@
 "use client";
 import { MotionConfig, motion, AnimatePresence, delay } from "framer-motion";
-
+import { fetchProducts } from "../fetch/fetchProducts";
 import CardProduct from "./CardProduct";
-const fetchProducts = () => {
-  return fetch("https://fakestoreapi.com/products?sort=desc", {
-    next: {
-      revalidate: 60,
-    },
-  }).then((res) => res.json());
-};
+
 const variants = {
   open: { opacity: 1, x: 0 },
   closed: { opacity: 0, x: -10 },
@@ -23,6 +17,7 @@ export default async function ListOfProducts() {
           <AnimatePresence>
             {products.slice(0, 4).map((post, index) => (
               <motion.div
+                key={post.id}
                 initial="closed"
                 animate="open"
                 variants={variants}

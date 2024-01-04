@@ -2,13 +2,7 @@
 
 import CardProduct from "@/app/components/CardProduct";
 import { MotionConfig, motion, AnimatePresence, delay } from "framer-motion";
-const fetchSingleProduct = ({ category }) => {
-  return fetch(`https://fakestoreapi.com/products/category/${category}`, {
-    next: {
-      revalidate: 60,
-    },
-  }).then((res) => res.json());
-};
+import { fetchSingleProduct } from "@/app/fetch/fetchsingleproduct";
 
 const variants = {
   open: { opacity: 1, x: 0 },
@@ -24,6 +18,7 @@ export default async function PagesProduct({ params }) {
         <div className="flex gap-3 flex-wrap ">
           {data.map((products, index) => (
             <motion.div
+              key={products.id}
               initial="closed"
               animate="open"
               variants={variants}
