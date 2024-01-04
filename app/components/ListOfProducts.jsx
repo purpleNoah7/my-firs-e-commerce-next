@@ -29,7 +29,7 @@ export default async function ListOfProducts() {
                 transition={{ duration: 0.6, delay: index * 0.05 }}
               >
                 <CardProduct
-                  key={post.title}
+                  key={post.id}
                   img={post.image}
                   price={post.price}
                   productName={post.title}
