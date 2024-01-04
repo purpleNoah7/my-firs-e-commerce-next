@@ -31,7 +31,11 @@ export default function Example({
 
         <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
           <div className="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
+<<<<<<< HEAD
             <Image
+=======
+               <Image
+>>>>>>> b39d2a0ff8882dde60e517f5e546ebe549a83a66
               width={100}
               height={100}
               src={image}
