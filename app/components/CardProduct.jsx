@@ -24,7 +24,7 @@ export default function CardProduct({
           initial="closed"
           animate="open"
           variants={variants}
-          transition={{ duration: 0.6, delay: delay * 0.05 }}
+          transition={{ duration: 0.6, delay: delay * 0.5 }}
         >
           <div class="max-w-[100px] min-h-[470px] p-3 max-h-[550px] grid grid-cols-1 place-items-center min-w-80  border border-gray-200 rounded-lg shadow dark:bg-transparent dark:border-gray-700 items-center justify-center overflow-hidden ">
             <div
