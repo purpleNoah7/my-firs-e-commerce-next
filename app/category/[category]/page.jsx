@@ -2,7 +2,13 @@
 
 import CardProduct from "@/app/components/CardProduct";
 import { MotionConfig, motion, AnimatePresence, delay } from "framer-motion";
-import { fetchSingleProduct } from "@/app/fetch/fetchsingleproduct";
+const fetchSingleProduct = ({ category }) => {
+  return fetch(`https://fakestoreapi.com/products/category/${category}`, {
+    next: {
+      revalidate: 60,
+    },
+  }).then((res) => res.json());
+};
 
 const variants = {
   open: { opacity: 1, x: 0 },
