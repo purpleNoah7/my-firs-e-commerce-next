@@ -14,7 +14,7 @@ export default function NavBar() {
     <header className="w-full top-0 z-50 flex items-center justify-between p-4 lg:px-6">
       <div className="flex w-full items-center text-white">
         <div className="w-full"></div>
-        
+
         <div className=" flex w-full justify-end  ">
           <ul className="flex justify-center items-center gap-4 font-semibold border border-black bg-black/50 backdrop:opacity-45  backdrop:blur-3xl p-3 rounded-full">
             {routes.map((links, index) => (

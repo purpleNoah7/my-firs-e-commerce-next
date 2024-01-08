@@ -10,7 +10,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="dark flex flex-col min-h-screen bg-neutral-950 relative">
-        <div class="absolute bottom-0 top-0 z-[-2] min-h-screen w-full bg-white dark:bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
         <NavBar></NavBar>
         <div className="flex-1">{children}</div>
         <Footer></Footer>

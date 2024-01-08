@@ -1,5 +1,3 @@
-import { MotionConfig, motion, AnimatePresence, delay } from "framer-motion";
-
 import CardProduct from "./CardProduct";
 const fetchProducts = () => {
   return fetch("https://fakestoreapi.com/products?sort=desc", {

@@ -12,7 +12,7 @@ export default async function SideBar() {
   const data = await getCategories();
 
   return (
-    <aside className="sticky p-7 mt-6 left-0 w-[300px] text-white capitalize">
+    <aside className="hidden sm:flex sticky p-7 mt-6 left-0 w-[300px] text-white capitalize">
       <ul className="flex flex-col gap-2">
         {data.map((cat, index) => (
           <li key={index}>
